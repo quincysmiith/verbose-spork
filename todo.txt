@@ -1,0 +1,18 @@
+## Weight ##
+
+1. plot real data
+2. make a line chart
+
+
+## Food ##
+
+1. allow uploading picture(s)
+2. add functionality to delete posts
+3. add functionality to update posts
+
+
+## Misc ##
+
+1. Add mobility section
+2. Add exercise (strength and cardio) section
+3. Add movement logging

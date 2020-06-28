@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Weight Tracker</h1>
+</div>
+
+
+
+{{ wtf.quick_form(form) }}
+
+
+<div class="container">
+    <div class="row">
+        <div class="chart" id="bargraph">
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+            <script>
+                var graphs = {{plot | safe}};
+                Plotly.plot('bargraph',graphs,{});
+            </script>
+        </div>
+    </div>
+</div>
+
+<div>
+    <p> Hello</p>
+</div>
+
+{% endblock %}

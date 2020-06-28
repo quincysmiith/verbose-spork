@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block page_content %}
+    <div class="page-header">
+        <h1>Food Tracker</h1>
+    </div>
+
+    {{ wtf.quick_form(form) }}
+
+    {% if food_logs|length > 1 %}
+        <table class="table table striped">
+
+            {% for entry in food_logs %}
+                <tr>
+                    <td>
+                        <h2>{{ entry.meal_type }}</h2>
+                        <h4>{{ entry.consume_date }}</h4>
+                        <p> {{entry.description}}</p>
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </table>
+
+    {% endif %}
+
+
+
+
+
+
+
+{% endblock %}
